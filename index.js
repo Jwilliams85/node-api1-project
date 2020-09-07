@@ -26,7 +26,7 @@ server.get("/", (req, res) => {
 });
 
 server.get('/api/users', (req, res) => {
-    res.status(200).json(hubs);
+    res.status(200).json(users);
 })
 
 server.post('/api/users', (req, res) => {
@@ -45,7 +45,7 @@ server.delete('/api/users/:id', (req, res) => {//the id name has to match on lin
 
     res.status(200).json(deleted);
 })
-server.delete('/api/users/:id', (req, res) => {//the id name has to match on line 42
+server.put('/api/users/:id', (req, res) => {//the id name has to match on line 42
     const id = req.params.id;
     const changes = req.body; 
 
